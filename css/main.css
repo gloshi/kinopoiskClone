@@ -1,0 +1,152 @@
+@import './reset.css';
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap');
+@import './loader.css';
+
+
+body {
+    font-family: 'Oswald', sans-serif;
+    background-color: black;
+    color: #fff;
+
+    background-image: url(./../img/bg.png);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: 0px;
+}
+
+.none {
+    display: none !important;
+}
+
+.container-left {
+    padding: 25px 15px 100px;
+    width: 930px;
+    min-width: 100vh;
+
+    border-right: 1px solid #162344;
+}
+
+.container-right {
+    position: fixed;
+    left: 930px;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    width: 750px;
+    padding: 25px;
+
+    background-color: rgba(5, 56, 185, 0.2);
+    border-right: 1px solid #162344;
+}
+
+.title-1 {
+    margin-bottom: 30px;
+    font-size: 28px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.films {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 30px;
+    
+    margin-bottom: 30px;
+}
+.card {
+    overflow: hidden;
+    padding-bottom: 15px;
+    width: 200px;
+    border-radius: 6px;
+    background-color: rgb(22, 22, 22);
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2 ease-in, background-color 0.2 ease-in;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    background-color: rgb(35, 35, 35);
+    box-shadow: 0px 10px 20px #00419873;
+}
+
+.card__img {
+    margin-bottom: 15px;
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+.card__title {
+    padding: 0 5px;
+    margin-bottom: 5px;
+    font-weight: 300;
+    font-size: 18px;
+}
+.card__year {
+    margin-bottom: 5px;
+    color: rgb(7, 150, 252);
+    font-weight: 300;
+    font-size: 14px;
+}
+.card__rate {
+    color: rgb(240, 246, 75);
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.show-more {
+    display: block;
+    padding: 10px 30px;
+    margin: 0 auto;
+
+    border-radius: 6px;
+    background-color: rgb(16, 85, 205);
+    color: #fff;
+    transition: opacity 0.2s ease-in;
+}
+.show-more:hover {
+    opacity: 0.8;
+}
+
+.loader-wrapper {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.btn-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px;
+}
+.film {
+    display: grid;
+    grid-template-areas: 'title title' 'photo desc';
+    gap: 30px;
+}
+
+.film_title {
+    grid-area: title;
+    font-size: 28px;
+    font-weight: 300;
+}
+
+.film_img {
+    width: 240px;
+    grid-area: photo;
+}
+
+.film_desc {
+    grid-area: desc;
+}
+
+.film_details {
+    color: aqua;
+}
+
+.film_text {
+    margin-top: 30px;
+    font-weight: 300;
+}
